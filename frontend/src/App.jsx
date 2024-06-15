@@ -1,15 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import { Chart } from './components/Chart'
+import { Navbar } from './components/Navbar'
+import { Sidebar } from './components/Sidebar'
+import Slider from './components/Slider'
+// import { Slider } from './components/Slider'
+import { Details } from './components/details'
+import { Tracks } from './components/track'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-      <div>
-      <h1 className='text-red-500 flex items-center justify-center'>Frontend Design</h1>
+      <div className='flex justify-start w-full' >
+    
+     <Sidebar/>
+    
+   <div className='w-full'>
+   <Navbar/>
+   <Tracks/>
+   <Details/>
+   {/* <Slider/> */}
+   <Chart/>
+   </div>
+
       </div>
      
     </>
