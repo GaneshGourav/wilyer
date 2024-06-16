@@ -10,14 +10,13 @@ export const Details = () => {
     datasets: [
       {
         label: "Votes",
-        data: [12, 19, 3, 5, 2, 3],
+        data: [700, 500, 400, 300, 200],
         backgroundColor: [
-          "rgba(255, 99, 132, 0.6)",
-          "rgba(54, 162, 235, 0.6)",
-          "rgba(255, 206, 86, 0.6)",
-          "rgba(75, 192, 192, 0.6)",
-          "rgba(153, 102, 255, 0.6)",
-          "rgba(255, 159, 64, 0.6)",
+          "rgb(100,182,153)",
+          "rgb(110,201,151)",
+          "rgb(180,234,151)",
+          "rgb(255,194,142)",
+          "rgb(255,215,142)",
         ],
         borderColor: [
           "rgba(255, 99, 132, 1)",
@@ -27,27 +26,25 @@ export const Details = () => {
           "rgba(153, 102, 255, 1)",
           "rgba(255, 159, 64, 1)",
         ],
-        borderWidth: 1,
+        borderWidth: 0,
       },
     ],
   };
 
   const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top",
-      },
-      tooltip: {
-        enabled: true,
-      },
+    legend: {
+      display: false,
+      position: "bottom",
     },
+    cutoutPercentage: 100,
+    rotation: -90,
+    circumference: 180,
   };
   return (
     <>
       <div className="text-white flex-row  md:flex justify-between mt-10 w-[91%]  ">
         {/* First item block */}
-        <div className=" border pb-3 px-5 md:w-[30%] bg-[#b9c1b6] rounded-xl ml-4  ">
+        <div className=" border pb-3 px-5 md:w-[30%] bg-[#b9c1b6] rounded-[35px] ml-4  ">
           <div className="text-center leading-[6px] text-[#8c9e95] text-3xl font-[500px] ">
             <p>...</p>
             <p>...</p>
@@ -57,7 +54,9 @@ export const Details = () => {
             <div>
               <h1 className="text-xl font-[700]">Summary</h1>
             </div>
-            <div><h1 className='text-[#6c6c6c] text-[14px]'>ooo</h1></div>
+            <div>
+              <h1 className="text-[#6c6c6c] text-[14px]">ooo</h1>
+            </div>
           </div>
           <div className="flex justify-between bg-[#d2e1f9] rounded-full text-black px-4 py-3 mt-5 ">
             <div className="flex justify-start gap-2">
@@ -121,7 +120,7 @@ export const Details = () => {
 
         {/* Second item block  */}
 
-        <div className="border px-5 w-full mt-5 md:mt-0 md:w-[30%] bg-[#b0d2c1] rounded-xl ml-4">
+        <div className="border px-5 w-full mt-5 md:mt-0 md:w-[30%] bg-[#b0d2c1] rounded-[35px] ml-4 md:relative">
           <div className="text-center leading-[6px] text-[#8c9e95] text-3xl font-[500px] ">
             <p>...</p>
             <p>...</p>
@@ -129,21 +128,27 @@ export const Details = () => {
           <div>
             <div className="flex justify-between text-black pt-5">
               <h1 className="text-xl font-[700]">Top 5 products by spend</h1>
-              <div><h1 className='text-[#6c6c6c] text-[14px]'>ooo</h1></div>
+              <div>
+                <h1 className="text-[#6c6c6c] text-[14px]">ooo</h1>
+              </div>
             </div>
             <div className="text-center mt-5 text-[#6b8075]">
               <p>Total Score</p>
               <h1 className="text-black font-[500] text-5xl">2,985</h1>
             </div>
           </div>
-          <div className=" md:w-2/5 mx-auto mt-5 ">
-            <Doughnut data={data} />
+          <div className=" md:w-[300px] md:h-0 mx-auto md:absolute top-[80px] left-14  ">
+            <Doughnut data={data} options={options} />
+            <div className="bg-[#d2f2c0] md:absolute top-[170px] left-[90px] text-center px-3 rounded-[15px]">
+              <p className="text-black font-[600]">$1,815.67</p>
+              <h1 className="text-[#6f7f65] font-[700]">BO7MCGRV7M</h1>
+            </div>
           </div>
         </div>
 
         {/* Third item block  */}
 
-        <div className="border px-8 w-full mt-3 md:mt-0 md:w-[30%] bg-[#bab6c1] rounded-xl ml-4">
+        <div className="border px-8 w-full mt-3 md:mt-0 md:w-[30%] bg-[#bab6c1] rounded-[35px] ml-4">
           <div className="text-center leading-[6px] text-[#8c9e95] text-3xl font-[500px] ">
             <p>...</p>
             <p>...</p>
@@ -151,7 +156,9 @@ export const Details = () => {
           <div>
             <div className="flex justify-between text-black pt-5">
               <h1 className="text-xl font-[700]">Highest ACoS campagins</h1>
-              <div><h1 className='text-[#6c6c6c] text-[14px]'>ooo</h1></div>
+              <div>
+                <h1 className="text-[#6c6c6c] text-[14px]">ooo</h1>
+              </div>
             </div>
             <div className=" mt-5 text-[#7a787e]  w-[100%]">
               <table className="  text-left p-1 ">

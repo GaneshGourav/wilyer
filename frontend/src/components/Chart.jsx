@@ -11,7 +11,6 @@ import {
   Legend,
 } from "chart.js";
 
-// Register necessary components with Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,10 +21,18 @@ ChartJS.register(
   Legend
 );
 export const Chart = () => {
-  const dates = ["24 Aug", "31 Aug", "07 Sep", "14 Sep", "21 Sep"];
+  const dates = [
+    "24 Aug",
+    "31 Aug",
+    "25Aug",
+    "27Aug",
+    "07 Sep",
+    "14 Sep",
+    "21 Sep",
+  ];
 
   // Cost data for the given dates
-  const costs = [4, 4.5, 4.25, 5, 5.2, 5.7, 6, 6.7, 6.3, 7];
+  const costs = [6, 6.5, 5.95, 6, 6.2, 5.7, 6, 6.7, 6.3, 7];
 
   const data = {
     labels: dates,
@@ -74,13 +81,13 @@ export const Chart = () => {
 
   return (
     <>
-      <div className="flex-row md:flex justify-between items-center px-5 mt-10 w-[92%]">
+      <div className="flex-row md:flex justify-between items-center px-5 mt-16 w-[97%]">
         <div className="bg-[#bfb293] w-full md:w-[45%]  rounded-3xl">
           <div className=" mx-auto">
             <Line data={data} options={options} />
           </div>
         </div>
-        <div className="bg-[#c4c3aa] w-full mx-auto mt-5 md:w-[45%]  rounded-3xl">
+        <div className="bg-[#c4c3aa] w-full mx-auto mt-5 md:mt-0  md:w-[45%]  rounded-3xl">
           <div className="mx-auto">
             <Line data={data} options={options} />
           </div>

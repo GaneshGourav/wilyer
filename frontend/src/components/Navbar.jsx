@@ -34,7 +34,6 @@ export const Navbar = () => {
               type="text"
               placeholder="search for anything"
               className="bg-[#26221f] rounded-full text-[#b6ac9f] outline-none px-2 "
-              
             />
           </div>
         </div>

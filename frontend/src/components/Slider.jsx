@@ -106,7 +106,7 @@ const Slider = () => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 3; // scroll-fast
+    const walk = (x - startX) * 3;
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
   const getIncrColor = (incr) => {
@@ -117,7 +117,7 @@ const Slider = () => {
     const value = parseFloat(rate.replace(/[^0-9.-]+/g, ""));
     return value > 500000 ? "text-[#e57373]" : "text-[#6ec997]";
   };
-  // text-[#e57373]
+
   return (
     <div className="slider-container overflow-hidden relative mt-10 px-5">
       <div
@@ -131,7 +131,7 @@ const Slider = () => {
         {data.map((el, index) => (
           <div
             key={index}
-            className="slider-item min-w-[250px] m-2 text-center p-5 shadow rounded-2xl bg-[#26221f]"
+            className="slider-item min-w-[250px] m-2 text-center p-5 shadow rounded-[30px] bg-[#26221f]"
           >
             <div></div>
             <div className="flex justify-between text-white">
@@ -145,13 +145,19 @@ const Slider = () => {
             <div>
               <p className="text-[12px] text-left text-[#6c6c6c]">{el.date}</p>
               <div>
-                <h1 className={`text-left ${getRateColor(el.rate)}`}>{el.rate}</h1>
+                <h1 className={`text-left ${getRateColor(el.rate)}`}>
+                  {el.rate}
+                </h1>
               </div>
               <div className="flex justify-between">
                 <div>
                   <p className="text-[#515b52]">{el.rate1}</p>
                 </div>
-                <div className={`${getIncrColor(el.incr)} px-2 rounded-xl flex items-center gap-1`}>
+                <div
+                  className={`${getIncrColor(
+                    el.incr
+                  )} px-2 rounded-xl flex items-center gap-1`}
+                >
                   {el.incr}
                   <div>
                     <FaArrowUpLong />

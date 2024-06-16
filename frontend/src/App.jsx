@@ -14,7 +14,6 @@ function App() {
         <div className="w-[200px] h-full">
           <Sidebar />
         </div>
-
         <div className="w-full">
           <Navbar />
           <Tracks />
