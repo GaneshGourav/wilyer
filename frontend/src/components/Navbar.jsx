@@ -9,16 +9,16 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 export const Navbar = () => {
   return (
     <>
-      <nav className="  text-white flex justify-between items-center px-5 mt-3">
+      <nav className="  text-white flex justify-between items-center px-5 mt-5">
         <div className="flex justify-between items-center  w-[20%]">
           <div>
             <h1 className="text-3xl font-[400]">Dashboard</h1>
           </div>
           <div>
-            <HiOutlineVideoCamera className="text-3xl" />
+            <HiOutlineVideoCamera className="text-3xl text-[#b6ac9f]" />
           </div>
           <div>
-            <AiTwotoneQuestionCircle className="text-3xl bg-black" />
+            <AiTwotoneQuestionCircle className="text-3xl bg-black text-[#b6ac9f]" />
           </div>
         </div>
         <div>
