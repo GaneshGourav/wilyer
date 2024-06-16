@@ -11,7 +11,7 @@ import close from "../assets/circle.jpg";
 export const Sidebar = () => {
   return (
     <>
-      <section className="w-[10%] h-[full]   mx-auto justify-center items-center">
+      <section className="w-[100px] h-[900px] hidden md:block  mx-auto justify-center items-center ">
         <div className="flex justify-center items-center w-[60px] border border-[#3e3935] mx-auto mt-5 rounded-full font-mono py-1">
           <h1 className="text-[#eada94] font-mona   text-center text-5xl">S</h1>
         </div>
@@ -38,7 +38,7 @@ export const Sidebar = () => {
             <img src={bags} alt="" />
           </div>
         </div>
-        <div className=" rounded-full w-[50px] mx-auto py-2 mt-6">
+        <div className=" rounded-full w-[50px] mx-auto py-2 ">
           <img src={close} alt="" />
         </div>
       </section>
