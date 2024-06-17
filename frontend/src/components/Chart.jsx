@@ -1,5 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -87,8 +88,8 @@ export const Chart = () => {
             <Line data={data} options={options} />
           </div>
         </div>
-        <div className="bg-[#c4c3aa] w-full mx-auto mt-5 md:mt-0  md:w-[45%]  rounded-3xl">
-          <div className="mx-auto">
+        <div className="bg-[#c4c3aa] h-1/2 w-full mx-auto mt-5 md:mt-0  md:w-[45%]  rounded-3xl">
+          <div className="mx-auto ">
             <Line data={data} options={options} />
           </div>
         </div>

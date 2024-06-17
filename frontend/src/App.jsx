@@ -2,8 +2,8 @@ import "./App.css";
 import { Chart } from "./components/Chart";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
-import Slider from "./components/Slider";
-// import { Slider } from './components/Slider'
+// import Slider from "./components/Slider";
+import { Slider } from './components/Slider'
 import { Details } from "./components/details";
 import { Tracks } from "./components/track";
 

@@ -1,9 +1,8 @@
 import React from "react";
-// import React from 'react';
+
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
-// Register necessary components with Chart.js
 ChartJS.register(ArcElement, Tooltip, Legend);
 export const Details = () => {
   const data = {
@@ -137,7 +136,7 @@ export const Details = () => {
               <h1 className="text-black font-[500] text-5xl">2,985</h1>
             </div>
           </div>
-          <div className=" md:w-[300px] md:h-0 mx-auto md:absolute top-[80px] left-14  ">
+          <div className=" md:w-[300px] md:h-0 mx-auto md:absolute top-[78px] left-14  ">
             <Doughnut data={data} options={options} />
             <div className="bg-[#d2f2c0] md:absolute top-[170px] left-[90px] text-center px-3 rounded-[15px]">
               <p className="text-black font-[600]">$1,815.67</p>

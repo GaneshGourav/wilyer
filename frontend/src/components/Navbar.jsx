@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css"
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
 import { IoIosNotificationsOutline } from "react-icons/io";
@@ -32,7 +33,7 @@ export const Navbar = () => {
             </div>
             <input
               type="text"
-              placeholder="search for anything"
+              placeholder="Search for anything"
               className="bg-[#26221f] rounded-full text-[#b6ac9f] outline-none px-2 "
             />
           </div>

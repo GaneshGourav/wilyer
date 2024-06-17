@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../App.css";
 import { FaArrowUpLong } from "react-icons/fa6";
 
-const Slider = () => {
+export const Slider = () => {
   const sliderRef = useRef(null);
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -35,7 +35,7 @@ const Slider = () => {
       date: "Oct 16/21 - Nov 14/21",
       rate: "$151,740",
       rate1: "145,869",
-      incr: "+5.12",
+      incr: "+5.12%",
     },
     {
       name: "Organic Sales Ra...",
@@ -172,4 +172,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+
